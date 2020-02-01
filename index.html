@@ -36,7 +36,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/logo.jpg" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">小石头</span>
                 </a>
@@ -121,7 +121,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.jpg" class="logo-img circle responsive-img">
         
         <div class="logo-name">小石头</div>
         <div class="logo-desc">
@@ -471,6 +471,41 @@
 </div>
                     
 
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: eval([{"name":"Unaccompanied Cello Suite No. 1 in G Major","artist":"Yo-Yo Ma","url":"https://sharefs.yun.kugou.com/202002011625/b6486aa2030798eacf2504033a820e40/G014/M03/12/01/roYBAFUKOHWATU8lACVLnfKDoVA814.mp3","cover":"http://jibaofiles.s3.amazonaws.com/public/87f349c6-b07f-4ab8-8dd7-bd97ca2d6ffb/1a9dbd71-1e3a-407b-ab6a-2c5cadb9c758.jpg"},{"name":"Unaccompanied Cello Suite No. 6 in D Major","artist":"Yo-Yo Ma","url":"http://jibaofiles.s3.amazonaws.com/public/87f349c6-b07f-4ab8-8dd7-bd97ca2d6ffb/1a9dbd71-1e3a-407b-ab6a-2c5cadb9c758.jpg","cover":"/medias/music/cover2.png"}])
+    });
+});
+</script>
                     
 
                     
