@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo博客的本地搭建, 嵌入式  文史哲 心智思维">
-    <meta name="description" content="什么是Hexo？Hexo是一款Node.js支持的快速、简单、强大的博客框架。当你用Markdown 格式写完一篇文章后，Hexo就可以在数秒内帮你渲染为一片高大上的静态HTML博文。
-Hexo有什么特点？
-快速生成各类网页资源;
-支持一键">
+    <meta name="keywords" content="yy, 嵌入式  文史哲 心智思维">
+    <meta name="description" content="#我很喜欢你哦 
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@ Hexo有什么特点？
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo博客的本地搭建 | Pony</title>
+    <title>yy | Pony</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +27,7 @@ Hexo有什么特点？
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.1.1"></head>
+<meta name="generator" content="Hexo 4.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -282,12 +280,12 @@ Hexo有什么特点？
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo博客的本地搭建</h1>
+                    <h1 class="description center-align post-title">yy</h1>
                 </div>
             </div>
         </div>
@@ -416,7 +414,7 @@ Hexo有什么特点？
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-15
+                    2020-01-31
                 </div>
                 
 
@@ -425,7 +423,7 @@ Hexo有什么特点？
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    690
+                    6
                 </div>
                 
 
@@ -443,59 +441,7 @@ Hexo有什么特点？
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="什么是Hexo？"><a href="#什么是Hexo？" class="headerlink" title="什么是Hexo？"></a>什么是Hexo？</h2><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是一款Node.js支持的快速、简单、强大的博客框架。当你用Markdown 格式写完一篇文章后，Hexo就可以在数秒内帮你渲染为一片高大上的静态HTML博文。</p>
-<h2 id="Hexo有什么特点？"><a href="#Hexo有什么特点？" class="headerlink" title="Hexo有什么特点？"></a>Hexo有什么特点？</h2><ul>
-<li>快速生成各类网页资源;</li>
-<li>支持一键部署到GitHub Pages; </li>
-<li>上百种主题和插件;</li>
-<li>支持<a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noopener">Github Flavored Markdown</a>语法,该语法是Github在标准的Markdown基础上做了扩充。</li>
-</ul>
-<h2 id="动手实验"><a href="#动手实验" class="headerlink" title="动手实验"></a>动手实验</h2><h3 id="一、Hexo的环境配置"><a href="#一、Hexo的环境配置" class="headerlink" title="一、Hexo的环境配置"></a>一、Hexo的环境配置</h3><p>   主要是为下面Hexo的安装运行事先准备一个运行环境，主要包含<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>和<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>两个软件的安装。</p>
-<ol>
-<li><p>点击安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>请选择10以上版本，完成后在CMD窗口中输入下面指令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
-<p>若结果显示版本号，则表示Node.js安装成功。继续输入下面指令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-<p>若结果显示版本号，则表示<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>安装成功。</p>
-<blockquote>
-<p>Tips: 新版的Node.js已经集成了npm，所以Node.js安装好后npm也一并安装好了。npm全称Node Package Manager，是运行在 Node.js 上的默认包管理工具。</p>
-</blockquote>
-</li>
-<li><p>点击安装<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a>,完成后在CMD窗口中输入下面指令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git</span><br></pre></td></tr></table></figure>
-<p>若结果列出Git的各种用法，则表示Git安装成功。</p>
-<blockquote>
-<p>Tips: 两个软件安装时一路next即可，但需要根据自己操作系统类型和CPU架构（X86、X64）选择不同版本安装。</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h3><ol>
-<li>安装Hexo: 在CMD窗口使用下面的命令</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>安装完后如果可以看到hexo-cli的版本号，则表示安装成功。如果不放心，可以输入以下指令来核查：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li><p>创建Hexo博客根目录: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">md blog</span><br></pre></td></tr></table></figure>
-<p>注意，上述语句会在CMD的当前路径下创建一个名为blog的文件夹。该文件夹后面将保存你的各种博客资源及博文。建议将这个目录生成在你常用的位置。</p>
-</li>
-<li><p>初始化Hexo博客：依次执行下面两条命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p>若实验结果出现“Start blogging with Hexo!”字符串，则表示初始化成功且可以开始写博客了。</p>
-<blockquote>
-<p>完成步骤1~3后，Hexo就已经在我们本机部署成功了。下面我们可以看看这博客长什么样。放心，这只是它的素颜，后续嫌它丑，你可以给它化妆。</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="三、博客（本地）预览"><a href="#三、博客（本地）预览" class="headerlink" title="三、博客（本地）预览"></a>三、博客（本地）预览</h3><ol>
-<li><p>启动Hexo服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>若结果发现有”Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> “字符串，则表示启动成功，Hexo当前就运行在上述网址。上述指令中的s表示server。</p>
-</li>
-<li><p>博客预览：在浏览器中输入上述网址<a href="http://localhost:4000/，如果看到新页面则大功告成。" target="_blank" rel="noopener">http://localhost:4000/，如果看到新页面则大功告成。</a></p>
-</li>
-</ol>
+                <p>#我很喜欢你哦 </p>
 
             </div>
             <hr/>
@@ -521,7 +467,7 @@ Hexo有什么特点？
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yangkai123.top/2019/12/15/1.Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/">http://yangkai123.top/2019/12/15/1.Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/</a>
+                    <a href="http://yangkai123.top/posts/2533169624/">http://yangkai123.top/posts/2533169624/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -726,25 +672,24 @@ Hexo有什么特点？
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/31/yy/">
+                <a href="/posts/2983461467/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="yy">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hello-world">
                         
-                        <span class="card-title">yy</span>
+                        <span class="card-title">hello-world</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            #我很喜欢你哦 
-
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-31
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-05
                         </span>
                         <span class="publish-author">
                             
@@ -761,10 +706,10 @@ Hexo有什么特点？
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/15/1.Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/">
+                <a href="/posts/2501011965/">
                     <div class="card-image">
                         
                         
@@ -794,7 +739,6 @@ Hexo有什么特点？
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -941,7 +885,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">696</span>&nbsp;字
+                class="white-color">693</span>&nbsp;字
             
             
             
