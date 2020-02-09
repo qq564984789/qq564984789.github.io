@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="2.连载系列（二）自己动手写博文, 嵌入式  文史哲 心智思维">
-    <meta name="description" content="
-
-title: 连载系列2 自己动手写博文cover: trueabbrlink: 1524748132
-
-什么是Markdown？使用Word写作，我们往往会不断使用鼠标去工具栏点击字体、段落、样式等按钮完成排版，但这对常用键盘编码的程">
+    <meta name="keywords" content="连载系列2 自己动手写博文, 嵌入式  文史哲 心智思维">
+    <meta name="description" content="什么是Markdown？使用Word写作，我们往往会不断使用鼠标去工具栏点击字体、段落、样式等按钮完成排版，但这对常用键盘编码的程序员来说是低效的、同时会影响思路。Markdown是一种轻量级标记语言，或者说是一种语法格式（类似HTML）。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +13,7 @@ title: 连载系列2 自己动手写博文cover: trueabbrlink: 1524748132
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>2.连载系列（二）自己动手写博文 | Pony</title>
+    <title>连载系列2 自己动手写博文 | Pony</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -283,12 +279,12 @@ title: 连载系列2 自己动手写博文cover: trueabbrlink: 1524748132
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">2.连载系列（二）自己动手写博文</h1>
+                    <h1 class="description center-align post-title">连载系列2 自己动手写博文</h1>
                 </div>
             </div>
         </div>
@@ -426,7 +422,7 @@ title: 连载系列2 自己动手写博文cover: trueabbrlink: 1524748132
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    923
+                    932
                 </div>
                 
 
@@ -444,11 +440,7 @@ title: 连载系列2 自己动手写博文cover: trueabbrlink: 1524748132
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol start="4">
-<li><hr>
-<p>title: 连载系列2 自己动手写博文<br>cover: true<br>abbrlink: 1524748132</p>
-<hr>
-<h2 id="什么是Markdown？"><a href="#什么是Markdown？" class="headerlink" title="什么是Markdown？"></a>什么是Markdown？</h2><p>使用Word写作，我们往往会不断使用鼠标去工具栏点击字体、段落、样式等按钮完成排版，但这对常用键盘编码的程序员来说是低效的、同时会影响思路。<a href="https://developer.github.com/v3/markdown/" target="_blank" rel="noopener">Markdown</a>是一种轻量级标记语言，或者说是一种语法格式（类似HTML）。通过使用特定标记帮助我们对文档排版。简言之，只要在文本文档中添加一些特殊符号，就可以使得文档具有一定格式。按照Markdown语法来编写的文件，它的后缀名便是“.md”</p>
+                <h2 id="什么是Markdown？"><a href="#什么是Markdown？" class="headerlink" title="什么是Markdown？"></a>什么是Markdown？</h2><p>使用Word写作，我们往往会不断使用鼠标去工具栏点击字体、段落、样式等按钮完成排版，但这对常用键盘编码的程序员来说是低效的、同时会影响思路。<a href="https://developer.github.com/v3/markdown/" target="_blank" rel="noopener">Markdown</a>是一种轻量级标记语言，或者说是一种语法格式（类似HTML）。通过使用特定标记帮助我们对文档排版。简言之，只要在文本文档中添加一些特殊符号，就可以使得文档具有一定格式。按照Markdown语法来编写的文件，它的后缀名便是“.md”</p>
 <h2 id="Markdown开发工具分类"><a href="#Markdown开发工具分类" class="headerlink" title="Markdown开发工具分类"></a>Markdown开发工具分类</h2><ul>
 <li><p>在线版本</p>
 <ul>
@@ -468,50 +460,46 @@ title: 连载系列2 自己动手写博文cover: trueabbrlink: 1524748132
 </blockquote>
 </li>
 </ul>
+<h2 id="动手实验"><a href="#动手实验" class="headerlink" title="动手实验"></a>动手实验</h2><h3 id="一、新建博文"><a href="#一、新建博文" class="headerlink" title="一、新建博文"></a>一、新建博文</h3><p>在Windows里开发，大家习惯通过鼠标右键的方式来新建文件，然后使用编辑器打开。为了更加<strong>自动化</strong>，我么希望通过一个指令来完成上述两个动作：新建文件+打开编辑器。</p>
+<ol>
+<li><strong>设置编辑器路径</strong>：在站点根目录（<code>blog\</code>）下新建<code>scripts</code>目录，然后再新建<code>auto_open.js</code>，在文件中填入以下内容：<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> spawn <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'child_process'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>exec<span class="token punctuation">;</span> 
+</code></pre>
 </li>
 </ol>
-<h2 id="动手实验"><a href="#动手实验" class="headerlink" title="动手实验"></a>动手实验</h2><h3 id="一、新建博文"><a href="#一、新建博文" class="headerlink" title="一、新建博文"></a>一、新建博文</h3><p>   在Windows里开发，大家习惯通过鼠标右键的方式来新建文件，然后使用编辑器打开。为了更加<strong>自动化</strong>，我么希望通过一个指令来完成上述两个动作：新建文件+打开编辑器。</p>
-<ol>
-<li><p><strong>设置编辑器路径</strong>：在站点根目录（<code>blog\</code>）下新建<code>scripts</code>目录，然后再新建<code>auto_open.js</code>，在文件中填入以下内容：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> spawn <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'child_process'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>exec<span class="token punctuation">;</span> 
+<p>// Hexo 2.x 用户复制这段<br>//hexo.on(‘new’, function(path){<br>     //spawn(‘start “markdown编辑器绝对路径.exe” ‘ + path);<br>//}); </p>
+<p>// Hexo 3 用户复制这段<br>hexo.on(‘new’, function(data){<br>    spawn(‘start “D:\Program Files\Typorae\Typora.exe” ‘ + data.path);<br>});</p>
+<pre><code>注意，`start`后面的编辑器路径得修改为你电脑上Typora实际安装的位置。如果忘记自己安装的Hexo 是什么版本，可以使用`hexo -v`指令来查看。本步骤通常只需在你电脑上操作一次，一旦步骤2执行成功，则以后新建博文就无需再次执行这一步。
 
-<span class="token comment" spellcheck="true">// Hexo 2.x 用户复制这段 </span>
-<span class="token comment" spellcheck="true">//hexo.on('new', function(path){</span>
-  <span class="token comment" spellcheck="true">//spawn('start "markdown编辑器绝对路径.exe" ' + path); </span>
-<span class="token comment" spellcheck="true">//}); </span>
+2. **新建一篇博文**：执行以下语句
+</code></pre><p>hexo new “filename”</p>
+<pre><code>其中filename可以用你喜欢的博文名字替代，命令执行完后，就会在_posts下生成一篇名叫filename的新文章。同时你会发现编辑器Typora也打开了，新文章正在等待你的输入！
 
-<span class="token comment" spellcheck="true">// Hexo 3 用户复制这段 </span>
-hexo<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'new'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span> 
- <span class="token function">spawn</span><span class="token punctuation">(</span><span class="token string">'start "D:\Program Files\Typorae\Typora.exe" '</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>注意，<code>start</code>后面的编辑器路径得修改为你电脑上Typora实际安装的位置。如果忘记自己安装的Hexo 是什么版本，可以使用<code>hexo -v</code>指令来查看。本步骤通常只需在你电脑上操作一次，一旦步骤2执行成功，则以后新建博文就无需再次执行这一步。</p>
-</li>
-<li><p><strong>新建一篇博文</strong>：执行以下语句</p>
-<pre><code>hexo new &quot;filename&quot;</code></pre><p>其中filename可以用你喜欢的博文名字替代，命令执行完后，就会在_posts下生成一篇名叫filename的新文章。同时你会发现编辑器Typora也打开了，新文章正在等待你的输入！</p>
-</li>
-</ol>
-<h3 id="二、开始Markdown写作"><a href="#二、开始Markdown写作" class="headerlink" title="二、开始Markdown写作"></a>二、开始Markdown写作</h3><ul>
-<li><p>在Typora里写作时，只要你使用Markdown格式，那么它会实时显示排版样式，而非大部分编辑器的双栏显示。它的缺点是需要用户熟悉Markdown语法，但最大的优点是无需频繁移动你的眼神。</p>
-</li>
-<li><p>Markdown的语法格式可以参考以下两个文档</p>
-<ul>
-<li><a href="https://www.baidu.com/link?url=kYCe1OpHA2iyBOzbprRccQKj-2DnDixt2qXcrFngoz_zRPZWHVDfg4T9Mo1Sg5ACTuffRk6hf-1ode2WilLz3a&wd=&eqid=97d5c5b70032540c000000065e3fd096" target="_blank" rel="noopener">Markdown 教程 | 菜鸟教程</a></li>
-<li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noopener">Github Flavored Markdown</a></li>
-</ul>
-<h3 id="三、（本地）查看新博文"><a href="#三、（本地）查看新博文" class="headerlink" title="三、（本地）查看新博文"></a>三、（本地）查看新博文</h3></li>
-</ul>
-<ol>
-<li><p><strong>清除旧数据</strong>（根目录下的public文件夹存放着旧有博客生成的HTML网页）</p>
-<pre><code>hexo  clean</code></pre><p>安装完后如果看到提示：数据库和public文件夹被删掉，则说明执行成功。</p>
-</li>
-<li><p><strong>生成新数据</strong>（生成新的HTML网页会存放到public文件夹下）</p>
-<pre><code>hexo  g</code></pre><p>若实验结果出现连续出现<code>Generated:</code>字符串，则表示执行成功。该命令首先会将source文件夹下所有的md文件进行渲染生成HTML页面，然后存放在public文件夹下。<code>g: generate</code> 意思是生成。</p>
-</li>
-<li><p><strong>启动Hexo服务</strong></p>
-<pre><code>hexo s</code></pre><p>若结果发现有”Hexo is running at <code>http://localhost:4000/</code>字符串，则表示启动成功，Hexo当前就运行在上述网址。上述指令中的s表示server。</p>
-</li>
-<li><p><strong>博客预览</strong>：在浏览器中输入上述网址<code>http://localhost:4000/</code>,如果看到新页面则大功告成。</p>
-</li>
+
+### 二、开始Markdown写作
+
+- 在Typora里写作时，只要你使用Markdown格式，那么它会实时显示排版样式，而非大部分编辑器的双栏显示。它的缺点是需要用户熟悉Markdown语法，但最大的优点是无需频繁移动你的眼神。
+- Markdown的语法格式可以参考以下两个文档
+  - [Markdown 教程 | 菜鸟教程](https://www.baidu.com/link?url=kYCe1OpHA2iyBOzbprRccQKj-2DnDixt2qXcrFngoz_zRPZWHVDfg4T9Mo1Sg5ACTuffRk6hf-1ode2WilLz3a&amp;wd=&amp;eqid=97d5c5b70032540c000000065e3fd096)
+  - [Github Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+
+### 三、（本地）查看新博文
+
+1. **清除旧数据**（根目录下的public文件夹存放着旧有博客生成的HTML网页）
+</code></pre><p>hexo  clean</p>
+<pre><code>
+安装完后如果看到提示：数据库和public文件夹被删掉，则说明执行成功。
+
+2. **生成新数据**（生成新的HTML网页会存放到public文件夹下）
+</code></pre><p>hexo  g</p>
+<pre><code>
+若实验结果出现连续出现`Generated:`字符串，则表示执行成功。该命令首先会将source文件夹下所有的md文件进行渲染生成HTML页面，然后存放在public文件夹下。`g: generate ` 意思是生成。
+
+3. **启动Hexo服务**
+</code></pre><p>hexo s</p>
+<p>```</p>
+<p>若结果发现有”Hexo is running at <code>http://localhost:4000/</code>字符串，则表示启动成功，Hexo当前就运行在上述网址。上述指令中的s表示server。</p>
+<ol start="4">
+<li><strong>博客预览</strong>：在浏览器中输入上述网址<code>http://localhost:4000/</code>,如果看到新页面则大功告成。</li>
 </ol>
 
             </div>
@@ -538,7 +526,7 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yangkai123.top/posts/4121648920/">http://yangkai123.top/posts/4121648920/</a>
+                    <a href="http://yangkai123.top/posts/2212454746/">http://yangkai123.top/posts/2212454746/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -739,9 +727,48 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/2212454746/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="连载系列2 自己动手写博文">
+                        
+                        <span class="card-title">连载系列2 自己动手写博文</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            什么是Markdown？使用Word写作，我们往往会不断使用鼠标去工具栏点击字体、段落、样式等按钮完成排版，但这对常用键盘编码的程序员来说是低效的、同时会影响思路。Markdown是一种轻量级标记语言，或者说是一种语法格式（类似HTML）。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            YK
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/2501011965/">
                     <div class="card-image">
@@ -762,47 +789,6 @@ Hexo有什么特点？
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            YK
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/4121648920/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="2.连载系列（二）自己动手写博文">
-                        
-                        <span class="card-title">2.连载系列（二）自己动手写博文</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-
-title: 连载系列2 自己动手写博文cover: trueabbrlink: 1524748132
-
-什么是Markdown？使用Word写作，我们往往会不断使用鼠标去工具栏点击字体、段落、样式等按钮完成排版，但这对常用键盘编码的程
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-02-06
                             </span>
@@ -814,7 +800,6 @@ title: 连载系列2 自己动手写博文cover: trueabbrlink: 1524748132
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
