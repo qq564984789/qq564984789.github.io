@@ -1,0 +1,1329 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="网页和蓝牙设备互动, 嵌入式  文史哲 心智思维">
+    <meta name="description" content="如果告诉你一个网页可以和你周边的蓝牙设备安全而且极具隐私性地通信，你会相信吗？告诉你吧，心率计、音乐灯这些东西都可以和网页直接互动。
+目前为止，只有本地手机APP可以和蓝牙设备互动。网页蓝牙（ Web Bluetooth ）API就是为了改">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>网页和蓝牙设备互动 | Pony</title>
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/avatar.jpg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Pony</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>系列教程</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/null">
+          
+          <span>Hexo</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/null">
+          
+          <span>STM32CubeMX</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/www.baidu.com">
+          
+          <i class="fas fa-address-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>百度</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/www.ccit.js.cn">
+          
+          <i class="fas fa-address-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>常州信息学院</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/download" class="waves-effect waves-light">
+      
+      <i class="fas fa-download" style="zoom: 0.6;"></i>
+      
+      <span>资源下载</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/avatar.jpg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Pony</div>
+        <div class="logo-desc">
+            
+            一个人的记录堂
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			系列教程
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/null " style="margin-left:75px";>
+				  
+		          <span>Hexo</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/null " style="margin-left:75px";>
+				  
+		          <span>STM32CubeMX</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/www.baidu.com " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-address-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>百度</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/www.ccit.js.cn " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-address-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>常州信息学院</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/download" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-download"></i>
+			
+			资源下载
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/qq564984789" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/qq564984789" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">网页和蓝牙设备互动</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-02-15
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.9k
+                </div>
+                
+
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>如果告诉你一个网页可以和你周边的蓝牙设备安全而且极具隐私性地通信，你会相信吗？告诉你吧，心率计、音乐灯这些东西都可以和网页直接互动。</p>
+<p>目前为止，只有本地手机APP可以和蓝牙设备互动。网页蓝牙（ Web Bluetooth ）API就是为了改变现状而生，已经开始支持网页浏览器了。实际上早年Google的 <a href="https://google.github.io/physical-web/" target="_blank" rel="noopener">Physical Web</a>项目，人们就已经可以直接通过网页和物理设备通信了。</p>
+<h3 id="一、开始之前"><a href="#一、开始之前" class="headerlink" title="一、开始之前"></a>一、开始之前</h3><p>这篇文章假设你已经有了解了低功耗蓝牙(BLE)和<a href="https://www.bluetooth.com/specifications/gatt/generic-attributes-overview" target="_blank" rel="noopener">GATT</a>是如何工作的。</p>
+<p>虽然网页蓝牙规范（ <a href="https://webbluetoothcg.github.io/web-bluetooth/" target="_blank" rel="noopener">Web Bluetooth API specification</a>）还没有完成，但是Chrome团队希望极客们（我说的就是你）可以来尝尝鲜，试试还在推进中的API，然后给API的规范或者实现细节一些反馈。</p>
+<p>网页蓝牙API的部分功能已经在Chrome操作系统，安卓、Mac、Windows上的Chrome浏览器上实现了。也就是说你应该可以实现以下功能了：</p>
+<ul>
+<li>请求并连接到附近的蓝牙设备</li>
+<li>读/写蓝牙特性（characteristic）</li>
+<li>读写蓝牙描述符（descriptor）</li>
+<li>接收GATT通知</li>
+<li>获取蓝牙设备连接/断开状态</li>
+</ul>
+<p>对于早期版本的Winodws和Linux,你还需要到<code>chrome://flags/#enable-experimental-web-platform-features</code>使能高亮标志，然后重启Chrome。</p>
+<h3 id="二、安全性要求"><a href="#二、安全性要求" class="headerlink" title="二、安全性要求"></a>二、安全性要求</h3><p>为了理解安全性上的折衷，我建议你看下这篇文章 <a href="https://medium.com/@jyasskin/the-web-bluetooth-security-model-666b4e7eed2" target="_blank" rel="noopener">网页蓝牙安全模型</a>，它来自Chrome团队一位名叫Jeffrey Yasskin软件工程师的手笔，主要研究网页蓝牙的API规范。</p>
+<h4 id="1、只允许HTTPS访问"><a href="#1、只允许HTTPS访问" class="headerlink" title="1、只允许HTTPS访问"></a>1、只允许HTTPS访问</h4><p>网页蓝牙API是Web中新添加的一项功能强大的特性，目前还处于实验/推进阶段，所以Goole的Chrome团队希望该特性只能在安全的上下文环境（<a href="https://w3c.github.io/webappsec-secure-contexts/#intro" target="_blank" rel="noopener">secure contexts</a>）中使用。</p>
+<blockquote>
+<p>我们非常关心安全性，所以你会发现新的Web功能都要求HTTPS。网页蓝牙API也不例外，这也是使用HTTPS运行网页的另一个原因。</p>
+</blockquote>
+<p>在开发过程中为了和网页蓝牙互动，你将可以通过<code>http://localhost</code>这个网址外加 <a href="https://chrome.google.com/webstore/detail/pnoffddplpippgcfjdhbmhkofpnaalpg" target="_blank" rel="noopener">Chrome Dev Editor</a> 编辑器、执行<code>python -m SimpleHTTPServer</code>命令。但如果你想部署它，你需要在服务器上启动HTTPS服务。我个人建议使用 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 来做Demo展示。</p>
+<p>在服务器上添加HTTPS服务需要获得一个TLS证书，然后再启用它。 <a href="https://developers.google.com/web/fundamentals/security/" target="_blank" rel="noopener">请通过这里了解</a>。更多消息，<a href="https://letsencrypt.org/" target="_blank" rel="noopener">请看这里</a>，你现在可以获取带有新Certificate Authority的免费TLS证书。</p>
+<h4 id="2、用户手势要求"><a href="#2、用户手势要求" class="headerlink" title="2、用户手势要求"></a>2、用户手势要求</h4><p>因为有安全性要求，名为<code>navigator.bluetooth.requestDevice</code>的函数（功能为发现蓝牙设备），必须由用户的手势来触发，比如触摸屏幕、点击鼠标。我们来谈一谈<a href="https://developers.google.com/web/updates/2016/10/pointer-events" target="_blank" rel="noopener">释放</a>、单击、触摸事件。</p>
+<pre class=" language-javascript"><code class="language-javascript">button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'pointerup'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Call navigator.bluetooth.requestDevice</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="三、研究代码"><a href="#三、研究代码" class="headerlink" title="三、研究代码"></a>三、研究代码</h3><p>网页蓝牙API严重依赖Javascript里的 <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener">Promises</a>。如果你还不熟悉，请看这两份材料：</p>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/getting-started/primers/promises" target="_blank" rel="noopener">Promises tutorial</a></li>
+<li><a href="https://segmentfault.com/a/1190000017312249" target="_blank" rel="noopener">理解JavaScript中的Promise</a></li>
+</ul>
+<h4 id="1、-请求（访问）蓝牙设备"><a href="#1、-请求（访问）蓝牙设备" class="headerlink" title="1、 请求（访问）蓝牙设备"></a>1、 请求（访问）蓝牙设备</h4><p>当前版本的网页蓝牙API规范允许网站运行在中央角色（Central role），然后通过BLE去连接GATT服务器。它支持和蓝牙4.0及以上的设备通信。<br>当网页使用<code>navigator.bluetooth.requestDevice</code>这个函数去请求访问周边设备时，Google Chrome浏览器会给用户弹出一个设备选择器的提示，你可以选择某个设备或者直接取消访问蓝牙设备的请求。</p>
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+<source id="webm" src="https://developers.google.com/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.webm" type="video/webm">
+</video>
+
+<p><code>navigator.bluetooth.requestDevice</code>这个函数必须强制性地带有一种过滤器的对象。过滤器用来返回那些和特定蓝牙设备名字或GATT服务相同的设备。</p>
+<p>例如，我现在想要请求的蓝牙设备正在广播<code>电量服务</code>,那么可以写成这样</p>
+<pre class=" language-javascript"><code class="language-javascript">navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> services<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'battery_service'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* ... */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>如果你的蓝牙GATT服务不在<a href="https://www.bluetooth.com/specifications/gatt/services/" target="_blank" rel="noopener">官方GATT服务</a>之列，你可以提供UUID全称或16、32位简写。</p>
+<pre class=" language-javascript"><code class="language-javascript">navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    services<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">0x1234</span><span class="token punctuation">,</span> <span class="token number">0x12345678</span><span class="token punctuation">,</span> <span class="token string">'99999999-0000-1000-8000-00805f9b34fb'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* ... */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>当然，你也可以基于蓝牙设备的名称去请求访问，例如使用全称过滤器关键字<code>name</code>、名称前缀过滤器关键字<code>namePrefix</code>。这种情形仍需注意，你还是要定义一个<code>optionalServices</code>关键字以便能访问某些服务。如果你没做，当你后面要访问这些服务时会出错。</p>
+<pre class=" language-javascript"><code class="language-javascript">navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Francois robot'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  optionalServices<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'battery_service'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* ... */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>最后，除了关键字<code>filters</code>,你还可以使用<code>acceptAllDevices</code>来显示周边所有的蓝牙设备。你还是要定义一个<code>optionalServices</code>关键字以便能访问某些服务。如果你没做，当你后面要访问这些服务时会出错。</p>
+<pre class=" language-javascript"><code class="language-javascript">navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  acceptAllDevices<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  optionalServices<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'battery_service'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* ... */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<blockquote>
+<p>请注意，上述代码可能导致设备选择器中列出了一堆相关设备，无过滤器由此带来了能耗。谨慎使用该功能。</p>
+</blockquote>
+<h4 id="2、连接到蓝牙设备"><a href="#2、连接到蓝牙设备" class="headerlink" title="2、连接到蓝牙设备"></a>2、连接到蓝牙设备</h4><blockquote>
+<p>如果你从<code>navigator.bluetooth.requestDevice&#39;s</code>返回得到一个蓝牙设备，然后准备做什么？让我们连接这个设备——它是一个定义了服务和特性的GATT服务器。</p>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript">navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> services<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'battery_service'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Human-readable name of the device.</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>device<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// Attempts to connect to remote GATT Server.</span>
+  <span class="token keyword">return</span> device<span class="token punctuation">.</span>gatt<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>server <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* ... */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h4 id="3、读取蓝牙特性值"><a href="#3、读取蓝牙特性值" class="headerlink" title="3、读取蓝牙特性值"></a>3、读取蓝牙特性值</h4><p>现在我们已经连接到了一个GATT服务器，然后希望获取一个主服务（Primary GATT Service）和一个属于该服务的特性。让我来试试看，例如去读取当前设备的电量。</p>
+<p>在这个例子里，<code>battery_level</code>是官方电量特性。</p>
+<pre class=" language-javascript"><code class="language-javascript">navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> services<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'battery_service'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> device<span class="token punctuation">.</span>gatt<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>server <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Getting Battery Service...</span>
+  <span class="token keyword">return</span> server<span class="token punctuation">.</span><span class="token function">getPrimaryService</span><span class="token punctuation">(</span><span class="token string">'battery_service'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>service <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Getting Battery Level Characteristic...</span>
+  <span class="token keyword">return</span> service<span class="token punctuation">.</span><span class="token function">getCharacteristic</span><span class="token punctuation">(</span><span class="token string">'battery_level'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>characteristic <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Reading Battery Level...</span>
+  <span class="token keyword">return</span> characteristic<span class="token punctuation">.</span><span class="token function">readValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>value <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Battery percentage is '</span> <span class="token operator">+</span> value<span class="token punctuation">.</span><span class="token function">getUint8</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>如果你使用自定义的GATT特性，你需要提供UUID全称或16、32位简写给<code>service.getCharacteristic</code>。注意到，你同样可以针对特性添加一个<code>characteristicvaluechanged</code>事件监听器来读取特性值。<a href="https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html" target="_blank" rel="noopener">请看这篇文章</a>来理解如何处理另一端设备发出的GATT通知。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>characteristic <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Set up event listener for when characteristic value changes.</span>
+  characteristic<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'characteristicvaluechanged'</span><span class="token punctuation">,</span>
+                                  handleBatteryLevelChanged<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// Reading Battery Level...</span>
+  <span class="token keyword">return</span> characteristic<span class="token punctuation">.</span><span class="token function">readValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">handleBatteryLevelChanged</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> batteryLevel <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">getUint8</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Battery percentage is '</span> <span class="token operator">+</span> batteryLevel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="4、写一个特性值"><a href="#4、写一个特性值" class="headerlink" title="4、写一个特性值"></a>4、写一个特性值</h4><p>   写特性和读特性一样简单。这次，让我们使用心率控制点（Heart Rate Control Point）这一特性来复位心率计上电量拓展域的值为0。</p>
+<p>   我保证此处没有什么奇特的地方。</p>
+<pre class=" language-javascript"><code class="language-javascript">   navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> services<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'heart_rate'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> device<span class="token punctuation">.</span>gatt<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>server <span class="token operator">=</span><span class="token operator">></span> server<span class="token punctuation">.</span><span class="token function">getPrimaryService</span><span class="token punctuation">(</span><span class="token string">'heart_rate'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>service <span class="token operator">=</span><span class="token operator">></span> service<span class="token punctuation">.</span><span class="token function">getCharacteristic</span><span class="token punctuation">(</span><span class="token string">'heart_rate_control_point'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>characteristic <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     <span class="token comment" spellcheck="true">// Writing 1 is the signal to reset energy expended.</span>
+     <span class="token keyword">var</span> resetEnergyExpended <span class="token operator">=</span> Uint8Array<span class="token punctuation">.</span><span class="token keyword">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">return</span> characteristic<span class="token punctuation">.</span><span class="token function">writeValue</span><span class="token punctuation">(</span>resetEnergyExpended<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>_ <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Energy expended has been reset.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h4 id="5、接收GATT通知（Notification）"><a href="#5、接收GATT通知（Notification）" class="headerlink" title="5、接收GATT通知（Notification）"></a>5、接收GATT通知（Notification）</h4><p>   现在，让我们看看当心率计上的心率测量特性值改变时，网页蓝牙如何知晓？</p>
+<pre class=" language-javascript"><code class="language-javascript">   navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> services<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'heart_rate'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> device<span class="token punctuation">.</span>gatt<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>server <span class="token operator">=</span><span class="token operator">></span> server<span class="token punctuation">.</span><span class="token function">getPrimaryService</span><span class="token punctuation">(</span><span class="token string">'heart_rate'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>service <span class="token operator">=</span><span class="token operator">></span> service<span class="token punctuation">.</span><span class="token function">getCharacteristic</span><span class="token punctuation">(</span><span class="token string">'heart_rate_measurement'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>characteristic <span class="token operator">=</span><span class="token operator">></span> characteristic<span class="token punctuation">.</span><span class="token function">startNotifications</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>characteristic <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     characteristic<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'characteristicvaluechanged'</span><span class="token punctuation">,</span>
+                                     handleCharacteristicValueChanged<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Notifications have been started.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token keyword">function</span> <span class="token function">handleCharacteristicValueChanged</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">var</span> value <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Received '</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token comment" spellcheck="true">// TODO: Parse Heart Rate Measurement value.</span>
+     <span class="token comment" spellcheck="true">// See https://github.com/WebBluetoothCG/demos/blob/gh-pages/heart-rate-sensor/heartRateSensor.js</span>
+   <span class="token punctuation">}</span></code></pre>
+<p>   <a href="https://googlechrome.github.io/samples/web-bluetooth/notifications.html" target="_blank" rel="noopener">这个例程</a> 展示了如何使用<code>stopNotifications()</code>函数停止接收通知，以及正确地移除和添加<code>characteristicvaluechanged</code>事件监听器。</p>
+<h4 id="6、断开连接"><a href="#6、断开连接" class="headerlink" title="6、断开连接"></a>6、断开连接</h4><p>   为了提供更好的用户体验，当你的网页蓝牙和设备断开连接后会显示一条警告信息，请求你重新连接。</p>
+<pre class=" language-javascript"><code class="language-javascript">   navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'Francois robot'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     <span class="token comment" spellcheck="true">// Set up event listener for when device gets disconnected.</span>
+     device<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'gattserverdisconnected'</span><span class="token punctuation">,</span> onDisconnected<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token comment" spellcheck="true">// Attempts to connect to remote GATT Server.</span>
+     <span class="token keyword">return</span> device<span class="token punctuation">.</span>gatt<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>server <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/* ... */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token keyword">function</span> <span class="token function">onDisconnected</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">let</span> device <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Device '</span> <span class="token operator">+</span> device<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">' is disconnected.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span></code></pre>
+<p>   你也可以调用<code>device.gatt.disconnect()</code>函数来断开网页和蓝牙设备的连接。这会触发<code>gattserverdisconnected</code>事件监听器。详细信息，请看<a href="https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html" target="_blank" rel="noopener">设备断开连接例程</a>和<a href="https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html" target="_blank" rel="noopener">自动重连例程</a>。</p>
+<blockquote>
+<p>警告：当设备断开连接后，蓝牙GATT属性、服务、特性等都是错误值。这意味着在重新建立连接后，你的代码需要通过<code>getPrimaryService(s)</code>, <code>getCharacteristic(s)</code>去重新获取值。</p>
+</blockquote>
+<h4 id="7、读-写蓝牙描述符（descriptor）"><a href="#7、读-写蓝牙描述符（descriptor）" class="headerlink" title="7、读/写蓝牙描述符（descriptor）"></a>7、读/写蓝牙描述符（descriptor）</h4><p>   蓝牙GATT描述符是用来描述特性值的。你可以像读/写蓝牙GATT特性一样去读/写它们。</p>
+<p>   例如，让我们来看看如何读取健康测量仪上测量精度的描述符。</p>
+<p>   在下面这个例子里，<code>health_thermomete</code>是健康测量仪服务、<code>measurement_interval</code>是测量精度特性、<code>gatt.characteristic_user_description</code>是特性的用户描述符。</p>
+<pre class=" language-JavaScript"><code class="language-JavaScript">   navigator.bluetooth.requestDevice({ filters: [{ services: ['health_thermometer'] }] })
+   .then(device => device.gatt.connect())
+   .then(server => server.getPrimaryService('health_thermometer'))
+   .then(service => service.getCharacteristic('measurement_interval'))
+   .then(characteristic => characteristic.getDescriptor('gatt.characteristic_user_description'))
+   .then(descriptor => descriptor.readValue())
+   .then(value => {
+     let decoder = new TextDecoder('utf-8');
+     console.log('User Description: ' + decoder.decode(value));
+   })
+   .catch(error => { console.log(error); });</code></pre>
+<p>   现在你可以读取健康测量仪上测量精度的描述符了，让我们再看看如何更新或改写它。</p>
+<pre class=" language-javascript"><code class="language-javascript">   navigator<span class="token punctuation">.</span>bluetooth<span class="token punctuation">.</span><span class="token function">requestDevice</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> services<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'health_thermometer'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>device <span class="token operator">=</span><span class="token operator">></span> device<span class="token punctuation">.</span>gatt<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>server <span class="token operator">=</span><span class="token operator">></span> server<span class="token punctuation">.</span><span class="token function">getPrimaryService</span><span class="token punctuation">(</span><span class="token string">'health_thermometer'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>service <span class="token operator">=</span><span class="token operator">></span> service<span class="token punctuation">.</span><span class="token function">getCharacteristic</span><span class="token punctuation">(</span><span class="token string">'measurement_interval'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>characteristic <span class="token operator">=</span><span class="token operator">></span> characteristic<span class="token punctuation">.</span><span class="token function">getDescriptor</span><span class="token punctuation">(</span><span class="token string">'gatt.characteristic_user_description'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>descriptor <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+     <span class="token keyword">let</span> encoder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TextEncoder</span><span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">let</span> userDescription <span class="token operator">=</span> encoder<span class="token punctuation">.</span><span class="token function">encode</span><span class="token punctuation">(</span><span class="token string">'Defines the time between measurements.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">return</span> descriptor<span class="token punctuation">.</span><span class="token function">writeValue</span><span class="token punctuation">(</span>userDescription<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="四、例程"><a href="#四、例程" class="headerlink" title="四、例程"></a>四、例程</h3><p>所有下面的<a href="https://googlechrome.github.io/samples/web-bluetooth/index.html" target="_blank" rel="noopener">网页蓝牙例程</a>已经成功验证过。为了最大程度地利用这些资源，我建议你安装安卓上的蓝牙外设模拟器。它可以模拟一个含有电池、心率计、健康测量仪等服务的蓝牙外设。</p>
+<h4 id="1、初学者"><a href="#1、初学者" class="headerlink" title="1、初学者"></a>1、初学者</h4><ul>
+<li><a href="https://googlechrome.github.io/samples/web-bluetooth/device-info.html" target="_blank" rel="noopener">Device Info</a>：获取BLE的基本设备信息。</li>
+<li><a href="https://googlechrome.github.io/samples/web-bluetooth/battery-level.html" target="_blank" rel="noopener">Battery Level</a>：从广播电池信息的BLE设备中获取电池信息</li>
+<li><a href="https://googlechrome.github.io/samples/web-bluetooth/reset-energy.html" target="_blank" rel="noopener">Reset Energy</a> 将心率计中的能量消耗值复位</li>
+<li><a href="https://googlechrome.github.io/samples/web-bluetooth/characteristic-properties.html" target="_blank" rel="noopener">Characteristic Properties</a> ：显示BLE设备里某个特性的所有属性</li>
+<li><a href="https://googlechrome.github.io/samples/web-bluetooth/notifications.html" target="_blank" rel="noopener">Notifications</a> ：启动/停止特性通知</li>
+<li><a href="https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html" target="_blank" rel="noopener">Device Disconnect</a>：断开连接并获得通知</li>
+<li><a href="https://googlechrome.github.io/samples/web-bluetooth/get-characteristics.html" target="_blank" rel="noopener">Get Characteristics</a> ：获取某个服务的所有特性</li>
+<li><a href="https://googlechrome.github.io/samples/web-bluetooth/get-descriptors.html" target="_blank" rel="noopener">Get Descriptors</a>：获取某个服务中所有特性的描述符。</li>
+</ul>
+<h4 id="2、混合多种操作"><a href="#2、混合多种操作" class="headerlink" title="2、混合多种操作"></a>2、混合多种操作</h4><p>在这里就不一一列出了，<a href="https://googlechrome.github.io/samples/web-bluetooth/" target="_blank" rel="noopener">更多用法请看这里</a>。</p>
+<h4 id="3、项目"><a href="#3、项目" class="headerlink" title="3、项目"></a>3、项目</h4><p><a href="https://github.com/WebBluetoothCG/demos" target="_blank" rel="noopener">网页蓝牙Demo</a></p>
+<h3 id="五、库"><a href="#五、库" class="headerlink" title="五、库"></a>五、库</h3><ul>
+<li><a href="https://www.npmjs.com/package/web-bluetooth-utils" target="_blank" rel="noopener">web-bluetooth-utils</a>：npm包，给网页蓝牙添加了一些更方便的API。</li>
+<li><a href="https://github.com/sandeepmistry/bleno" target="_blank" rel="noopener">bleno</a>：用于实现BLE外设的Node.js模块。</li>
+<li><a href="https://github.com/sandeepmistry/noble" target="_blank" rel="noopener">noble</a>：用于实现BLE中央设备的Node.js模块。</li>
+<li><a href="https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device" target="_blank" rel="noopener">platinum-bluetooth</a> </li>
+<li><a href="https://github.com/manekinekko/angular-web-bluetooth" target="_blank" rel="noopener">angular-web-bluetooth</a> </li>
+</ul>
+<h3 id="六、工具"><a href="#六、工具" class="headerlink" title="六、工具"></a>六、工具</h3><ul>
+<li><p><a href="https://beaufortfrancois.github.io/sandbox/web-bluetooth/generator/" target="_blank" rel="noopener">Get Started with Web Bluetooth</a> ：一款简单的网页蓝牙生成器。</p>
+</li>
+<li><p><a href="https://github.com/beaufortfrancois/sandbox/tree/gh-pages/web-bluetooth/bluetooth-developer-studio-plugin" target="_blank" rel="noopener">Web Bluetooth Developer Studio Plugin</a> ：如果你已经是一名蓝牙开发者，那么这个工具会帮你生成网页蓝牙的js源码。</p>
+</li>
+<li><p><code>chrome://bluetooth-internals</code>:这是一个Chrome浏览器的插件，使用它可以查看周边蓝牙设备的信息：状态、服务、特性、描述符等。</p>
+<p><img src="http://yangkai123.top/www/20200215/vS0L03aJjMyO.png?imageslim" alt="mark"></p>
+<p>同时，我还推荐你看下官方的调试说明<a href="https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs" target="_blank" rel="noopener">“How to file Web Bluetooth bugs”</a> 。</p>
+<h3 id="七、下一步工作"><a href="#七、下一步工作" class="headerlink" title="七、下一步工作"></a>七、下一步工作</h3></li>
+</ul>
+<p>检查下<a href="https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md" target="_blank" rel="noopener">浏览器和平台实现状况</a>，了解网页蓝牙API的实现详情。</p>
+<p>尽管目前还未完成所有API，我们也可以对将来要做的先睹为快：</p>
+<ul>
+<li><a href="https://github.com/WebBluetoothCG/web-bluetooth/pull/239" target="_blank" rel="noopener">扫描周边蓝牙广播</a> ：使用<code>navigator.bluetooth.requestLEScan()</code>。</li>
+</ul>
+<h3 id="八、资源"><a href="#八、资源" class="headerlink" title="八、资源"></a>八、资源</h3><ul>
+<li>Stack Overflow: <a href="https://stackoverflow.com/questions/tagged/web-bluetooth" target="_blank" rel="noopener">https://stackoverflow.com/questions/tagged/web-bluetooth</a></li>
+<li>Chrome Feature Status: <a href="https://www.chromestatus.com/feature/5264933985976320" target="_blank" rel="noopener">https://www.chromestatus.com/feature/5264933985976320</a></li>
+<li>Implementation Bugs: <a href="https://crbug.com/?q=component:Blink%3EBluetooth" target="_blank" rel="noopener">https://crbug.com/?q=component:Blink%3EBluetooth</a></li>
+<li>Web Bluetooth Spec: <a href="https://webbluetoothcg.github.io/web-bluetooth" target="_blank" rel="noopener">https://webbluetoothcg.github.io/web-bluetooth</a></li>
+<li>Spec Issues: <a href="https://github.com/WebBluetoothCG/web-bluetooth/issues" target="_blank" rel="noopener">https://github.com/WebBluetoothCG/web-bluetooth/issues</a></li>
+<li>BLE Peripheral Simulator App: <a href="https://github.com/WebBluetoothCG/ble-test-peripheral-android" target="_blank" rel="noopener">https://github.com/WebBluetoothCG/ble-test-peripheral-android</a></li>
+</ul>
+<p><strong>本文翻译自Google Chrome的工程师François Beaufort的文章，<a href="(https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web#samples_demos_and_codelabs)">原文请点击这里</a>。</strong></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://yangkai123.top" rel="external nofollow noreferrer">YK</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://yangkai123.top/posts/1137737873/">http://yangkai123.top/posts/1137737873/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://yangkai123.top" target="_blank">YK</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/1137737873/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="网页和蓝牙设备互动">
+                        
+                        <span class="card-title">网页和蓝牙设备互动</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            如果告诉你一个网页可以和你周边的蓝牙设备安全而且极具隐私性地通信，你会相信吗？告诉你吧，心率计、音乐灯这些东西都可以和网页直接互动。
+目前为止，只有本地手机APP可以和蓝牙设备互动。网页蓝牙（ Web Bluetooth ）API就是为了改
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            YK
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/3410577690/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="连载系列3 Hexo博客乔迁Github之旅">
+                        
+                        <span class="card-title">连载系列3 Hexo博客乔迁Github之旅</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            为什么要乔迁？前两节讲述的是Hexo博客在本地的搭建，这时候博客是部署在你自己电脑上的，也只有用你的电脑才能访问这个博客，我把它叫本地博客。在网络时代，我们都希望自己的博客可以联网访问。我所谓的网络博客，就是将博客部署在一台具有公网IP地址
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            YK
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="http://yangkai123.top" target="_blank">YK</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">5.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "2";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/state/outPortal/loginPortal.action" target="_blank">苏ICP备20005621号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/qq564984789" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:564984789@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=564984789" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 564984789" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
