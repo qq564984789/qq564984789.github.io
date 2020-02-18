@@ -754,6 +754,32 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '41ec9756aa4a812554c1',
+        clientSecret: '1217a1d59ce80eefe54bcbbe8394b1d09bf4ac0d',
+        repo: 'https://github.com/qq564984789/BlogTalk',
+        owner: 'qq564984789',
+        admin: null,
+        id: '2020-02-06T09-59-44',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
 
     
 
