@@ -473,7 +473,7 @@ Hexo有什么特点？
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    724
+                    773
                 </div>
                 
 
@@ -500,40 +500,44 @@ Hexo有什么特点？
 </ul>
 <h2 id="动手实验"><a href="#动手实验" class="headerlink" title="动手实验"></a>动手实验</h2><h3 id="一、Hexo的环境配置"><a href="#一、Hexo的环境配置" class="headerlink" title="一、Hexo的环境配置"></a>一、Hexo的环境配置</h3><p>   主要是为下面Hexo的安装运行事先准备一个运行环境，主要包含<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>和<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>两个软件的安装。</p>
 <ol>
-<li><strong>点击安装</strong><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>请选择10以上版本，完成后在CMD窗口中输入下面指令:<pre><code>$ node -v</code></pre>若结果显示版本号，则表示Node.js安装成功。继续输入下面指令:<pre><code>$ npm -v</code></pre>若结果显示版本号，则表示<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>安装成功。为了提升访问速度，可以把npm的源修改为淘宝镜像</li>
-</ol>
-<pre><code>npm config set registry http://registry.npm.taobao.org/</code></pre><blockquote>
+<li><p><strong>点击安装</strong><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>请选择10以上版本，完成后在CMD窗口中输入下面指令:</p>
+<pre><code>$ node -v</code></pre><p>若结果显示版本号，则表示Node.js安装成功。如下图所示。<br><img src="http://yangkai123.top/20200305230005.png" alt="">继续输入下面指令:</p>
+<pre><code>$ npm -v</code></pre><p>若结果显示版本号，则表示<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>安装成功。如下图所示。<br><img src="http://yangkai123.top/1583420498183.png" alt=""><br>为了提升访问速度，可以把npm的源修改为淘宝镜像</p>
+<pre><code>$ npm config set registry http://registry.npm.taobao.org/</code></pre><blockquote>
 <p>Tips: 新版的Node.js已经集成了npm，所以Node.js安装好后npm也一并安装好了。npm全称Node Package Manager，是运行在 Node.js 上的默认包管理工具。</p>
 </blockquote>
-<ol start="2">
-<li><strong>点击安装</strong><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a>,完成后在CMD窗口中输入下面指令:<pre><code>git</code></pre>若结果列出Git的各种用法，则表示Git安装成功。<blockquote>
-<p>Tips: 两个软件安装时一路next即可，但需要根据自己操作系统类型和CPU架构（X86、X64）选择不同版本安装。</p>
-</blockquote>
+</li>
+<li><p><strong>点击安装</strong><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a>,完成后在CMD窗口中输入下面指令:</p>
+<pre><code>git</code></pre><p>若结果列出Git的各种用法，则表示Git安装成功。如下图所示<br><img src="http://yangkai123.top/1583420667741.png" alt=""></p>
 </li>
 </ol>
+<blockquote>
+<p>Tips: 两个软件安装时一路next即可，但需要根据自己操作系统类型和CPU架构（X86、X64）选择不同版本安装。</p>
+</blockquote>
 <h3 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h3><ol>
 <li><p><strong>安装Hexo</strong>: 在CMD窗口使用下面的命令</p>
-<pre><code>npm install hexo-cli -g</code></pre><p>g表示全局安装。安装完后如果可以看到hexo-cli的版本号，则表示安装成功。如果不放心，可以输入以下指令来核查：</p>
-<pre><code>hexo -v</code></pre></li>
+<pre><code>npm install hexo-cli -g</code></pre><p>g表示全局安装。安装完后如果可以看到hexo-cli的版本号，则表示安装成功。结果如下图所示。<br><img src="http://yangkai123.top/1583420786126.png" alt="">如果不放心，可以输入以下指令来核查：</p>
+<pre><code>hexo -v</code></pre><p>若结果显示版本号，则表示安装成功。如下图所示。<br><img src="http://yangkai123.top/20200305231146.png" alt=""></p>
+</li>
 <li><p><strong>创建Hexo博客根目录</strong>: </p>
 <pre><code>md blog </code></pre><p>注意，上述语句会在CMD的当前路径下创建一个名为blog的文件夹。该文件夹后面将保存你的各种博客资源及博文。建议将这个目录生成在你常用的位置。</p>
 </li>
 <li><p><strong>初始化Hexo博客</strong>：依次执行下面两条命令</p>
 <pre><code>cd blog
-hexo init</code></pre><p>若实验结果出现“Start blogging with Hexo!”字符串，则表示初始化成功且可以开始写博客了。</p>
+hexo init</code></pre><p>若实验结果出现“Start blogging with Hexo!”字符串，则表示初始化成功且可以开始写博客了。<br><img src="http://yangkai123.top/1583421286022.png" alt=""><br>最后显示内容为：<br><img src="http://yangkai123.top/1583421373512.png" alt=""></p>
+</li>
+</ol>
 <blockquote>
 <p>完成步骤1~3后，Hexo就已经在我们本机部署成功了。下面我们可以看看这博客长什么样。放心，这只是它的素颜，后续嫌它丑，你可以给它化妆。</p>
 </blockquote>
-</li>
-</ol>
 <h3 id="三、博客（本地）预览"><a href="#三、博客（本地）预览" class="headerlink" title="三、博客（本地）预览"></a>三、博客（本地）预览</h3><ol>
 <li><p><strong>启动Hexo服务</strong></p>
-<pre><code>hexo s</code></pre><p>若结果发现有”Hexo is running at <code>http://localhost:4000/</code>字符串，则表示启动成功，Hexo当前就运行在上述网址。上述指令中的s表示server。</p>
+<pre><code>hexo s</code></pre><p>若结果发现有”Hexo is running at <code>http://localhost:4000/</code>字符串，则表示启动成功，Hexo当前就运行在上述网址。上述指令中的s表示server。<br><img src="http://yangkai123.top/20200305231842.png" alt=""></p>
 </li>
-<li><p><strong>博客预览</strong>：在浏览器中输入上述网址<code>http://localhost:4000/</code>,如果看到新页面则大功告成。</p>
+<li><p><strong>博客预览</strong>：在浏览器中输入上述网址<code>http://localhost:4000/</code>,如果看到新页面则大功告成。<br><img src="http://yangkai123.top/20200305232022.png" alt=""></p>
 </li>
 </ol>
-<pre><code></code></pre>
+
             </div>
             <hr/>
 
