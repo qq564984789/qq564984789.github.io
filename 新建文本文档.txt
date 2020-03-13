@@ -1,0 +1,72 @@
+学校每堂课的上课时间设计为45分钟,是和人的注意力集中时间有关。因此网上授课的单集视频录制时间不宜过长。
+
+
+
+
+
+LED发光板：
+1、原理图
+2、PCB图
+3、3D正反面图、侧视图
+4、BOM表
+5、工程文件
+
+
+
+#NDEBUG
+NUCLEO_F401RE
+USE_STM32F4XX_STEVAL_IDB00xV1
+STM32F401xE
+
+
+红旭开发板 https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC
+
+红橡木  https://www.baillie.com/red-oak
+        http://www.wood-database.com/wood-articles/distinguishing-red-oak-from-white-oak/
+
+app设计     https://uniapp.dcloud.io/
+常州信息OJ  http://10.10.74.125/problemset.php?search=%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84
+
+孟岩   https://blog.csdn.net/myan/
+
+LSM6DS3驱动编写  https://blog.csdn.net/ycli12/article/details/48341077
+		https://blog.csdn.net/Strange_Gu/article/details/82963936
+
+《奇葩说》——像辩手一样的生活    https://www.jianshu.com/p/18e44a681d76
+
+
+如何像奇葩说辩手一样，拥有让人高潮的思维？   http://www.sohu.com/a/232502621_419222
+
+Mculover666 | 原创文章精选（2019-10-30更新）  https://mp.weixin.qq.com/s/kld_7qDCgdqbMT8tywSUtw
+
+https://www.codesheep.cn/2018/01/20/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0LiveRe%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/
+
+
+TI  BLE     http://dev.ti.com/tirex/explore/node?node=ADoEZBrWKWqhpyfpKc8WDw__krol.2c__LATEST
+
+Building Arduino Projects for the Internet of Things: Experiments with Real-World Applications
+《用于物联网的Arduino项目开发:实用案例解析》[美]安德尔·杰韦德(Adeel Javed)
+
+Arduino从入门到精通  (美)约翰·白赫泰(John Baichtal) 著；翁恺
+学Arduino玩转电子制作/（美）威尔彻　著，翁恺　译
+动手玩转Arduino (澳)鲍克斯尔John Boxall |译者:翁恺
+
+
+
+翁老师的网课，除了声音特别好听，讲解特别有趣等等一系列优秀的地方以外，特别值得赞颂的就是老师基本上所有的代码之中，都有特别注重交互的体验感。System.out.println("给您找零"+x+“元”+y+"分")很多其他老师就只是输出一个数字，顶多取两位小数，，很少有这样考虑到真正编程的过程中，我们的使用者，使用得是否舒适.
+
+还有就是当时永平杰出教学贡献奖投票的时候，学校食堂那边有很多易拉宝，其他的老师都是放的正装照，证件照之类的，摆得端端正正，唯独翁老师：哈哈哈，像是大头贴，哈哈哈哈，在小小的易拉宝上面，特别抢眼！
+
+
+
+大陆官网发布地址：ooolooo.club ,
+https://coyun.space/user/shop
+
+https://www.youneed.win/free-ssr
+
+https://factpedia.org/index.php?title=%E5%88%98%E7%A6%BE&variant=zh
+
+
+https://www.academia.edu/
+
+https://adeeljaved.com/tag/insights/
