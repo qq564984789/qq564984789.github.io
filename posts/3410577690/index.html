@@ -470,7 +470,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    873
+                    1.1k
                 </div>
                 
 
@@ -516,8 +516,11 @@
 <li><strong>查看仓库配置</strong>：点击仓库右上角的<code>Settings</code>选项。</li>
 </ol>
 <blockquote>
-<p>如果发现Github Pages这一部分有<code>Your site is published at https://username.github.io</code>字样，则表明仓库具备了网页展示功能。提醒下：这个新建的仓库就是用来下面保存Hexo博客的各种资源文件的。</p>
+<p>如果发现Github Pages这一部分有<code>Your site is published at https://username.github.io</code>字样，则表明仓库具备了网页展示功能。提醒下：这个新建的仓库就是用来下面保存Hexo博客的各种资源文件的。<br>4. <strong>获取本机当前用户的SSH公钥</strong>：首先查看在本机的当前用户(操作系统的登录账户)目录下是否已经存在ssh公钥。<code>~</code>表示当前用户的家目录。</p>
 </blockquote>
+<pre><code>ls -a ~</code></pre><p>如果没有发现.ssh目录存在，则表明当前用户还没有ssh密钥，则可以继续下面两步:</p>
+<pre><code>cd ~
+ssh-keygen -t rsa -C &quot;you@example.com&quot;</code></pre><p>其中双引号的内容修改为你自己在Github上注册的邮箱。过程中当需要用户输入时，可以直接回车。指令执行结果如下图所示。<img src="http://yangkai123.top/20200313214311.png" alt="">图中的<code>~/ssd/.ssh/id_rsa.pub</code>文件就是我们需要的,它保存着我们需要的<code>public key</code>。<br>5. <strong>Github账户添加SSH公钥</strong>：在Github账户的<code>Settings</code>-&gt; <code>SSH and GPG keys</code>下单击<code>New SSH key</code>，将<code>id_rsa.pub</code>文件中的所有内容拷贝进去。</p>
 <h3 id="二、绑定Hexo和Github"><a href="#二、绑定Hexo和Github" class="headerlink" title="二、绑定Hexo和Github"></a>二、绑定Hexo和Github</h3><ol>
 <li><strong>修改本地站点配置文件</strong>: 打开站点目录（<code>blog\</code>）下的<code>_config.yml</code>文件，将最后一部分修改为</li>
 </ol>
@@ -1037,7 +1040,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.1k</span>&nbsp;字
+                class="white-color">8.4k</span>&nbsp;字
             
             
             
