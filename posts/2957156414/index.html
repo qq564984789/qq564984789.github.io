@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo 图片">
-    <meta name="description" content="我们用word写作时，如果需要插入图片，通常只需简单的复制粘贴操作。但在我们Markdown格式的博文里，插入图片却没这么简单。
-实验原理在Markdown格式的博文中，只要获取待插入图片在网络上的绝对位置，然后在博文中引用该地址，就可以实">
+    <meta name="keywords" content="杨牧逝世, 嵌入式  文史哲 思维认知">
+    <meta name="description" content="​      午后翻阅微信公众号的更新，在三联生活周刊上看到这样一个标题，台湾诗人杨牧去世：让风朗诵，那最后的诗篇。旋即心头一惊，直接点击文章读起来。
+​      起初知道杨牧，是看文道兄《一千零一夜》节目中的一期——有人问我公理和正义的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>连载系列4：让博客图文并茂 | Pony</title>
+    <title>杨牧逝世 | Pony</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -315,12 +315,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">连载系列4：让博客图文并茂</h1>
+                    <h1 class="description center-align post-title">杨牧逝世</h1>
                 </div>
             </div>
         </div>
@@ -435,25 +435,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Hexo-%E5%9B%BE%E7%89%87/">
-                                <span class="chip bg-color">Hexo  图片</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -462,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-24
+                    2020-03-14
                 </div>
                 
 
@@ -471,7 +458,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    556
+                    600
                 </div>
                 
 
@@ -489,27 +476,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>我们用word写作时，如果需要插入图片，通常只需简单的复制粘贴操作。但在我们Markdown格式的博文里，插入图片却没这么简单。</p>
-<h3 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h3><p>在Markdown格式的博文中，只要获取待插入图片在网络上的绝对位置，然后在博文中引用该地址，就可以实现图片的显示。因此我们的重点是让自己的图片在网络上有一个位置，找到一个家。图片的这个家有个专有名词叫图床，一如我们的家叫做小区。简言之，将图片送入图床后我们就可以获得图片的网络位置了。</p>
-<h3 id="动手实验一"><a href="#动手实验一" class="headerlink" title="动手实验一"></a>动手实验一</h3><blockquote>
-<p>图床有很多品牌，比如微博图床、Github图床、七牛图床、阿里云OSS等。我们这里选择七牛图床。</p>
-</blockquote>
-<ol>
-<li><p>注册登录七牛云-&gt;新建空间-&gt;上传文件-&gt;获取图片网络地址<br><img src="http://yangkai123.top/tt%20.gif" alt="获取图片网络地址"></p>
-</li>
-<li><p>将地址复制粘贴至文档：依次输入<code>!</code>、 <code>[]</code> 、<code>()</code>，最后将地址放入<code>()</code>内。<br><img src="http://yangkai123.top/ts.gif" alt="显示图片"></p>
-</li>
-</ol>
-<blockquote>
-<p>为了在文章中放一张图片，需要经过上面这么多操作，肯定有人觉得这太麻烦了。有没有简单的办法呢？请看使用图床上传工具的动手实验二。</p>
-</blockquote>
-<h3 id="动手实验二"><a href="#动手实验二" class="headerlink" title="动手实验二"></a>动手实验二</h3><ol>
-<li>下载安装 <a href="http://mpic.lzhaofu.cn/" target="_blank" rel="noopener">MPic图床神器</a>，这个工具只能把上传图片到七牛云，稍有局限。如果你使用的是其他图床，请移步资源下载页面中选择<a href="https://pan.baidu.com/s/1nfS8VnJIiRZcMmPy3l0bPQ" target="_blank" rel="noopener">PicGo</a>。</li>
-<li>MPic图床神器设置方法：<br><img src="http://yangkai123.top/fa.gif" alt="图传工具上传图片"><br>将七牛云的空间名，域名及访问秘钥、安全密钥都写入MPic工具的<code>设置</code>菜单项。这样我们以后就不需要每次先登录七牛云，然后手动上传文件，再复制图片网络地址等这些操作了。只需一个快捷键，就可以把图片自动上传到自己的空间，上传好后还可以直接获得图片的网络地址哦。</li>
-</ol>
-<blockquote>
-<p>以后每次上传图片只需选中图片后<code>Ctrl+C</code>，待屏幕右上角显示图片上传成功后在文档中<code>Ctrl+V</code>即可插入图片，是不是很简单哦。</p>
-</blockquote>
+                <p>​      午后翻阅微信公众号的更新，在三联生活周刊上看到这样一个标题，<a href="https://mp.weixin.qq.com/s/dr5evXshqUPK3lxHWDTpYg" target="_blank" rel="noopener">台湾诗人杨牧去世：让风朗诵，那最后的诗篇</a>。旋即心头一惊，直接点击文章读起来。</p>
+<p>​      起初知道杨牧，是看文道兄《一千零一夜》节目中的一期——<a href="https://v.youku.com/v_show/id_XMTI3NDE4NjQ3Ng==.html?spm=a2h0k.11417342.soresults.dtitle" target="_blank" rel="noopener">有人问我公理和正义的问题</a>。没错，这就是台湾诗人杨牧的诗作名字。在我零星有限的读诗经历中，没有看过诗名可以如此冗长、平实却语带疑问。不仅于此，全诗篇幅宏大，足足六大段，却完全没有古体诗的对仗、押韵、平仄等等形式上的讲究，似乎就是一篇处处拆分的记叙文，难道现代诗就是这样？更重要的是，看似明确的标题之下却很难清楚地知道杨牧的态度，他到底要说什么？公理和正义是普世价值，非常政治正确，诗人本可以非常安全地讴歌之，但在他徐徐展开的笔触中，雨、枯树枝、黑鸟、乌云、苦茶……这么多意象的反复营造，一层接一层地给全诗笼罩了一种压抑神秘的气氛，最后我自己也成了诗里那个“是失去向导的使徒”了^_^。诗人提出了问题，自己却不给答案，不给结果。有句话说，好的作者在于给读者制造不安，用在这里真是恰如其分。</p>
+<p>​      读者和作者的相遇，有时候靠的就是缘分。如果杨牧不是台湾诗人——数年前在台湾三个月的研学经历使我多了一份关于这个岛屿的历史与现实记忆，如果主题不是公理和正义——屡屡在现实生活中让人失望困惑，却依然不断追寻渴求的基本价值，或许我会错过杨牧的这首<a href="http://book.ifeng.com/a/20150707/16174_0.shtml" target="_blank" rel="noopener">《有人问我公理和正义的问题》</a>。</p>
+<p>谨以短文，纪念杨牧。</p>
+<p>附：腾讯纪念文章 <a href="https://new.qq.com/omn/20200314/20200314A08L2200.html" target="_blank" rel="noopener">诗人杨牧去世：他的语言，始终让人感到新鲜</a></p>
+<p>​                              <a href="https://new.qq.com/omn/20200313/20200313A0VHZ100.html" target="_blank" rel="noopener">台湾诗人杨牧去世：他是在古典与现代之间出入自如的“诗骑士”</a> </p>
+<p>​       网易纪念文章<a href="https://edu.163.com/20/0314/06/F7LJ3ILB00297VGM.html" target="_blank" rel="noopener">台湾诗人杨牧去世！曾告诉北大陈平原：院长要代表教授对付校长</a></p>
 
             </div>
             <hr/>
@@ -535,7 +508,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.yangkai123.top/posts/1669602160/">http://www.yangkai123.top/posts/1669602160/</a>
+                    <a href="http://www.yangkai123.top/posts/2957156414/">http://www.yangkai123.top/posts/2957156414/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -572,11 +545,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Hexo-%E5%9B%BE%E7%89%87/">
-                                    <span class="chip bg-color">Hexo  图片</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -745,7 +714,7 @@
         repo: 'qq564984789.github.io',
         owner: 'qq564984789',
         admin: "qq564984789",
-        id: '2020-02-24T09-53-06',
+        id: '2020-03-14T22-01-38',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -766,49 +735,40 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/306616858/">
+                <a href="/posts/2957156414/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Windows上的巧克力？">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="杨牧逝世">
                         
-                        <span class="card-title">Windows上的巧克力？</span>
+                        <span class="card-title">杨牧逝世</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是chocolatey?不是巧克力（chocolate），不能纵享丝滑哦^_^。chocolatey是Windows下的包管理工具（Package Manager），你只需输入一条指令，就可以安装Windows上的大部分应用程序,可下载
+                            ​      午后翻阅微信公众号的更新，在三联生活周刊上看到这样一个标题，台湾诗人杨牧去世：让风朗诵，那最后的诗篇。旋即心头一惊，直接点击文章读起来。
+​      起初知道杨牧，是看文道兄《一千零一夜》节目中的一期——有人问我公理和正义的
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-14
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/chocolatey/" class="post-category">
-                                    chocolatey
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            YK
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/chocolatey/">
-                        <span class="chip bg-color">chocolatey</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -819,31 +779,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3874400213/">
+                <a href="/posts/342518872/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CC2640R2F助您简化BLE程序开发">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Zephyr的安装">
                         
-                        <span class="card-title">CC2640R2F助您简化BLE程序开发</span>
+                        <span class="card-title">Zephyr的安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            TI所谓的SimpleLink系列微控制器（MCU）真的一如其名，简单易用吗？答案是肯定的。SimpleLink系列微控制器平台希望达到两点：(1)在丰富的文档支持下统一程序开发;       (2)在基于云的IDE里实现快速评估。作为Si
+                            什么是Zephyr?项目的取名，往往包含着作者的意图构想。zephyr的中文释义是微风、和风，这初看起来没什么特别。当我查了英英释义之后，发现它的意思是a slight wind (usually refreshing)，因此可以猜测作者希
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/BLE/" class="post-category">
-                                    BLE
+                            <a href="/categories/Zephyr/" class="post-category">
+                                    Zephyr
                                 </a>
                             
                             
@@ -853,8 +813,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/BLE-CC2640R2F-SimplelinkAcademy/">
-                        <span class="chip bg-color">BLE    CC2640R2F     SimplelinkAcademy</span>
+                    <a href="/tags/Zephyr/">
+                        <span class="chip bg-color">Zephyr</span>
                     </a>
                     
                 </div>
