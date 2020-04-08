@@ -516,7 +516,8 @@
 <h3 id="二、服务器上建站"><a href="#二、服务器上建站" class="headerlink" title="二、服务器上建站"></a>二、服务器上建站</h3><ol>
 <li><strong>安装宝塔面板（Bt-Panel）</strong>：进入服务器系统后，执行以下命令</li>
 </ol>
-<pre><code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh</code></pre><pre><code>  最后如果出现`Congratulations!`字样，表示安装成功，结果如下图所示。</code></pre><p><img src="http://yangkai123.top/20200403133003.png" alt=""></p>
+<pre><code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh</code></pre><p>最后如果出现<code>Congratulations!</code>字样，表示安装成功，结果如下图所示。</p>
+<p><img src="http://yangkai123.top/20200403133003.png" alt=""></p>
 <ol start="2">
 <li><p><strong>访问面板</strong>：</p>
 <p>（1）在浏览器中输入上图最中<code>Bt-Panel:</code>后的网址。这个网址其实就是我们服务器的公网IP，而面板的默认端口是8888。</p>
@@ -531,9 +532,10 @@
 </li>
 <li><p><strong>新建（博客）网站站点</strong>：在宝塔Linux面板页做如下设置即可。注意要填写自己购买的域名哦！</p>
 <p><img src="http://yangkai123.top/20200403140803.png" alt=""></p>
-<pre><code>   站点创建成功后，出现如下页面。至此，`/www/wwwroot/www.yangkai123.top`这个目录就可以作为网站站点，保存我们需要显示的各种网页了。</code></pre><p><img src="http://yangkai123.top/image-20200403141344880.png" alt=""></p>
 </li>
 </ol>
+<p>站点创建成功后，出现如下页面。至此，<code>/www/wwwroot/www.yangkai123.top</code>这个目录就可以作为网站站点，保存我们需要显示的各种网页了。</p>
+<p>   <img src="http://yangkai123.top/image-20200403141344880.png" alt=""></p>
 <h3 id="三、Hexo升天"><a href="#三、Hexo升天" class="headerlink" title="三、Hexo升天"></a>三、Hexo升天</h3><p>&emsp; Hexo自带一些指令，支持将本地博客资源一键部署至Github或Coding等平台。很遗憾的是，hexo不支持一键部署至普通第三方平台。前面说过，所谓将Hexo博客乔迁，从实现原理来说，就是将博客根目录（<code>blog\</code>）下<code>public</code>文件夹里的所有文件上传至云服务器的某个文件夹内，但该文件夹需有网页显示功能。因此，接下来有两种办法来达到此目的。</p>
 <ol>
 <li><p><strong>本地文件上传</strong>：可以通过cuteftp等工具，直接将本地<code>blog\public</code>下的所有内容拖放至<code>/www/wwwroot/www.yangkai123.top/</code>这个目录下。</p>
@@ -545,9 +547,13 @@
 </li>
 </ol>
 <pre><code>git clone your_repository_location</code></pre><p>   其中<code>your_repository_location</code>表示你github上的博客仓库位置。完成后可发现<code>/www/wwwroot/</code>目录下增加了一个新的目录：<br><img src="http://yangkai123.top/20200403151532.png" alt=""><br>  (2)  将新增目录下的所有内容拷贝至<code>/www/wwwroot/www.yangkai123.top/</code>这个目录：</p>
-<pre><code>cp -rf qq564984789.github.io/*  www.yangkai123.top </code></pre><pre><code>   至此，Hexo博客在腾讯云服务器上部署完成</code></pre><ol start="3">
+<pre><code>cp -rf qq564984789.github.io/*  www.yangkai123.top </code></pre><p> 至此，Hexo博客在腾讯云服务器上部署完成</p>
+<ol start="3">
 <li><strong>博客预览</strong>：在浏览器中输入你购买的域名,如果看到新页面则大功告成。</li>
 </ol>
+<blockquote>
+<p>如果希望了解自己服务器对外部访问请求的响应速度，可以通过<a href="http://ping.chinaz.com/" target="_blank" rel="noopener">站长之家</a>这个工具。</p>
+</blockquote>
 <hr>
 
             </div>
@@ -1043,7 +1049,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.8k</span>&nbsp;字
+                class="white-color">14.2k</span>&nbsp;字
             
             
             
